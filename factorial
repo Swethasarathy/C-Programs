@@ -1,0 +1,15 @@
+#include<stdio.h>
+void main()
+{
+int num,fact=1,i;
+printf("Enter number : ");
+scanf("%d",&num);
+if((num>=1)&&(num<=7))
+{
+for(i=1;i<=num;i++)
+fact = fact *i;
+printf("%d! = %d",num,fact);
+}
+if((num<1)||(num>7))
+printf("\nEnter the number within 1 -7");
+}
