@@ -1,0 +1,23 @@
+#include<stdio.h>
+void main()
+{
+int a[5],b,i,flag=0;
+for(i=0;i<5;i++)
+{
+printf("Enter a number : ");
+scanf("%d",&a[i]);
+}
+printf("\nEnter the number to be searched : ");
+scanf("%d",&b);
+for(i=0;i<=5;i++)
+{
+if(b==a[i])
+flag++;
+}
+if(flag>1)
+printf("\nThe number %d appears %d times in the first five numbers",b,flag);
+else if(flag>0)
+printf("\nThe number %d appears in the first five numbers",b);
+else
+printf("\nThe number %d does not appear in the first five numbers",b);
+}
