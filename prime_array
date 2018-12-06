@@ -1,0 +1,25 @@
+#include<stdio.h>
+void main()
+{
+int i,j=0,a[20],n,flag=0;
+printf("\nEnter the size of the array : ");
+scanf("%d",&n);
+printf("\nEnter the array elements : \n");
+for(i=0;i<n;i++)
+scanf("%d",&a[i]);
+while(j<n)
+{
+for(i=1;i<=a[j];i++)
+{
+if(a[j]%i==0)
+flag++;
+}
+if((a[j]==1)||(a[j]==0)){}
+else if(flag<=2)
+printf("\n%d is a prime number",a[j]);
+else
+printf("\n%d is not a prime number",a[j]);
+flag=0;
+j++;
+}
+}
