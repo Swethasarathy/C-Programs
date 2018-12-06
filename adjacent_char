@@ -1,0 +1,34 @@
+#include<stdio.h>
+void main()
+{
+char a[27]={'A','B','C','D','E','F','G','H','I','J','K','L','M','N','O','P','Q','R','S','T','U','V','W','X','Y','Z','\0'};
+char ch,p,s;
+int i;
+printf("\nEnter the Character : ");
+scanf("%c",&ch);
+for(i=0;i<27;i++)
+{
+if(a[i]==ch)
+{
+if(a[i]=='A')
+{
+p = 'Z';
+s= a[i+1];
+printf("\nThe adjacent characters are : %c %c",p,s);
+}
+else if(a[i]=='Z')
+{
+p=a[i-1];
+s='A';
+printf("\nThe adjacent characters are : %c %c",p,s);
+}
+else
+{
+p = a[i-1];
+s = a[i+1];
+printf("\nThe adjacent characters are : %c %c",p,s);
+break;
+}
+}
+}
+}
