@@ -1,0 +1,21 @@
+#include<stdio.h>
+void main()
+{
+char str[50];
+int i=0,n=0,count;
+printf("\nEnter a string : ");
+scanf("%s",str);
+while(str[i]!='\0')
+{
+n++;
+i++;
+}
+for(i=0;i<n;i++)
+{
+if((str[i]>=65)&&(str[i]<=91))
+{
+str[i] = str[i]+32;
+}
+}
+printf("\nThe String in lower case : %s",str);
+}
