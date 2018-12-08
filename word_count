@@ -1,0 +1,15 @@
+#include<stdio.h>
+void main()
+{
+char str[300];
+int i=0,count,n=0;
+printf("\nEnter a sentence : ");
+gets(str);
+while(str[i]!='\0')
+{
+if(str[i]==' ')
+n++;
+i++;
+}
+printf("%d",n+1);
+}
