@@ -1,0 +1,54 @@
+#include<stdio.h>
+void interest(float,float);
+void main()
+{
+float p,n;
+int ch;
+printf("\nChoose your Time period for deposition of cash");
+printf("\n1.In terms of days\n2.In terms of years\n");
+printf("\nEnter your choice : ");
+scanf("%d",&ch);
+printf("\nEnter the Priniciple Amount : ");
+scanf("%f",&p);
+switch(ch)
+{
+case 1: printf("\nEnter the no.of.days : ");
+
+        scanf("%f",&n);
+        interest(p,n);
+        break;
+case 2: printf("\nEnter the no.of.years : ");
+        scanf("%f",&n);
+        n = n * 365;
+        interest(p,n);
+        break;
+default: printf("\nInvalid choice");
+}
+}
+void interest(float a, float b)
+{
+float r,simp;
+if((b>=0)&&(b<=300))
+{
+r = 8.5;
+b = b/365;
+simp = (a * b *r)/100;
+printf("\nThe Interest Amount is : %f", simp);
+}
+else if((b>300)&&(b<=1000))
+{
+r = 7.2;
+b = b/365;
+simp = (a*b*r)/100;
+printf("\nThe interest amount is : %f",simp);
+}
+else if((b>1000)&&(b<=1825))
+{
+r = 7;
+b = b/365;
+simp = (a*b*r)/100;
+printf("\nThe interest amount is : %f",simp);
+}
+else
+{}
+}
