@@ -1,0 +1,54 @@
+#include<stdio.h>
+struct college
+{
+int id;
+char clg[70];
+};
+struct student
+{
+int reg;
+char name[30], dept[10];
+};
+struct college details();
+void display(struct student*,int n);
+void main()
+{
+int n;
+struct college c;
+struct student s[20];
+int i;
+c = details();
+printf("\nEnter the no.of.students : ");
+scanf("%d",&n);
+for(i=0;i<n;i++)
+{
+printf("\nEnter your RegNo : ");
+scanf("%d",&s[i].reg);
+printf("\nEnter your Name : ");
+scanf("%s",s[i].name);
+printf("\nEnter your Dept : ");
+scanf("%s",s[i].dept);
+}
+printf("\nCollege ID : %d",c.id);
+printf("\nCollege Name : %s",c.clg);
+display(s,n);
+}
+struct college details()
+{
+struct college cl;
+printf("\nEnter your College code : ");
+scanf("%d",&cl.id);
+printf("\nEnter your College Name : ");
+scanf("%s",cl.clg);
+return cl;
+}
+void display(struct student *dt,int n)
+{
+int i;
+for(i=0;i<n;i++)
+{
+printf("\nRegNo : %d",dt[i].reg);
+printf("\nName : %s",dt[i].name);
+printf("\nDept : %s",dt[i].dept);
+}
+}
