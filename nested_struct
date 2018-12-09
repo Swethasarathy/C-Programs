@@ -1,0 +1,32 @@
+#include<stdio.h>
+struct college
+{
+int code;
+char str[70];
+};
+struct student
+{
+int reg;
+char name[30],dept[10];
+struct college c;
+}s,*ptr;
+void main()
+{
+struct student s;
+ptr = &s;
+printf("\nEnter your College Code : ");
+scanf("%d",&ptr->c.code);
+printf("\nEnter your College Name : ");
+scanf("%s",ptr->c.str);
+printf("\nEnter your Reg No : ");
+scanf("%d",&ptr->reg);
+printf("\nEnter your Name : ");
+scanf("%s",ptr->name);
+printf("\nEnter your Dept : ");
+scanf("%s",ptr->dept);
+printf("\nCollege Code : %d",ptr->c.code);
+printf("\nCollege Name : %s",ptr->c.str);
+printf("\nReg NO :%d",ptr->reg);
+printf("\nName : %s",ptr->name);
+printf("\nDept : %s",ptr->dept);
+}
